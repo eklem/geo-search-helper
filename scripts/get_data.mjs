@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'
-import Geohash from 'latlon-geohash';
+import Geohash from 'latlon-geohash'
 import { writeFile } from 'node:fs'
+import { extract, words, numbers } from 'words-n-numbers'
 
 // Get photos
 const response = await fetch('https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=4c118b2a6828ec58ece162c08fce298c&format=json&nojsoncallback=1&id=breial&photoset_id=72157600841917142&extras=geo,license,owner_name,tags,views,url_l')
@@ -23,7 +24,7 @@ const documentProcess = function (photos) {
       licenseid: photoObj.license,
       license: '© All rights reserved',
       ownername: photoObj.ownername,
-      tags: photoObj.tags,
+      tags: extract(photoObj.tags, { regex: [words, numbers], toLowercase: true }),
       latitude: photoObj.latitude,
       longitude: photoObj.longitude,
       geohash: Geohash.encode(photoObj.latitude, photoObj.longitude),
