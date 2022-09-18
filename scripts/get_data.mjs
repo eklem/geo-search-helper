@@ -37,7 +37,7 @@ const documentProcess = function (photos) {
 
 function writeJson (fileName, json) {
   const string = JSON.stringify(json, null, '  ')
-  writeFile('./test_data.json', string, (err) => {
+  writeFile('./dataset/geophotos.json', string, (err) => {
     if (err) throw err;
     console.log('successfully written test_data.json')
   })
