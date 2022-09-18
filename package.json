@@ -1,0 +1,30 @@
+{
+  "name": "geo-search-helper",
+  "version": "0.0.1",
+  "description": "Helper functions for geographical search within search-index.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eklem/geo-search-helper.git"
+  },
+  "devDependencies": {
+    "node-fetch": "^3.2.10",
+    "latlon-geohash": "^2.0.0"
+  },
+  "keywords": [
+    "search",
+    "geo",
+    "geographical",
+    "geographical-search",
+    "geo-search"
+  ],
+  "author": "Espen Klem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eklem/geo-search-helper/issues"
+  },
+  "homepage": "https://github.com/eklem/geo-search-helper#readme"
+}
