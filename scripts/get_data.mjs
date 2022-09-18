@@ -30,7 +30,8 @@ const documentProcess = function (photos) {
       geohash: Geohash.encode(photoObj.latitude, photoObj.longitude),
       url: photoObj.url_l,
       height: photoObj.height_l,
-      width: photoObj.width_l
+      width: photoObj.width_l,
+      urlphotopage: 'https://flickr.com/photos/breial/' + photoObj.id
     }
   })
   return photosProcessed
