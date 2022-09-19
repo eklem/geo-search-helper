@@ -1,6 +1,6 @@
 {
   "name": "geo-search-helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Helper functions for geographical search within search-index.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "devDependencies": {
     "node-fetch": "^3.2.10",
     "latlon-geohash": "^2.0.0",
-    "words-n-numbers": "^7.1.2"
+    "words-n-numbers": "^7.1.2",
+    "batr": "^2.1.7"
   },
   "keywords": [
     "search",
