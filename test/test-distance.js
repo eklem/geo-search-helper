@@ -1,4 +1,4 @@
-import { getDistanceFromLatLonInKm } from '../src/index.mjs'
+import { getDistanceFromLatLonInKm } from '../src/index.js'
 
 const osloTrondheim = getDistanceFromLatLonInKm(59.92163880374441, 10.748807812690696, 63.43533499958433, 10.394401877202329)
 const osloDrammen = getDistanceFromLatLonInKm(59.92163880374441, 10.748807812690696, 59.74868088039004, 10.204349443896618)

@@ -16,7 +16,7 @@ function findGeoPhotos (photos) {
 }
 
 const documentProcess = function (photos) {
-  // clean object
+  // Exctractm calculate and enrich what's needed
   const photosProcessed = photos.map(function(photoObj) {
     return {
       id: photoObj.id,
@@ -37,6 +37,7 @@ const documentProcess = function (photos) {
   return photosProcessed
 }
 
+// write JSON
 function writeJson (fileName, json) {
   const string = JSON.stringify(json, null, '  ')
   writeFile('./dataset/geophotos.json', string, (err) => {
@@ -45,6 +46,7 @@ function writeJson (fileName, json) {
   })
 }
 
+// run the code!
 const geoPhotos = findGeoPhotos(data.photoset.photo)
 const geoPhotosProcessed = documentProcess(geoPhotos)
 writeJson ('./geo_dataset.json', geoPhotosProcessed)

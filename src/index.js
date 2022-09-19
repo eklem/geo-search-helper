@@ -1,4 +1,4 @@
-// Import latlon-geohash library
+import * as Geohash from '../node_modules/latlon-geohash/latlon-geohash.js'
 
 // Calculating Harviestine distance between two lat/lon-points
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
@@ -16,4 +16,4 @@ function deg2rad(deg) {
 }
 
 // export stuff
-export { getDistanceFromLatLonInKm }
+export { getDistanceFromLatLonInKm, Geohash }
