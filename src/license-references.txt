@@ -1,6 +1,6 @@
 Short version for minified scripts:
 
 The MIT License (MIT)
-Copyright (c) 2019 - 2022 Espen Klem
+Copyright (c) 2022 Espen Klem
 
-Full license text + Third party licenses found in ./LICENSES
+Full license text + Third party licenses found in ./LICENSES.txt
