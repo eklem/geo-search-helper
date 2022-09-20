@@ -1,11 +1,11 @@
 {
   "name": "geo-search-helper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Helper functions for geographical search within search-index.",
   "main": "index.js",
   "scripts": {
     "build": "rollup --config",
-    "test": "standard './*.js' './test/*.js' && npm run build"
+    "test": "standard './src/*.js' './test/*.mjs' && npm run build && npx ava ./test/test.cjs.js && npx ava ./test/test.esm.mjs"
   },
   "repository": {
     "type": "git",
