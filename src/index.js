@@ -1,4 +1,4 @@
-import * as Geohash from '../node_modules/latlon-geohash/latlon-geohash.js'
+import Geohash from '../node_modules/latlon-geohash/latlon-geohash.js'
 
 // Haversine formula
 // Calculating Harviestine distance between two lat/lon-points

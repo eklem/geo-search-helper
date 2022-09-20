@@ -240,11 +240,6 @@ class Geohash {
 
 }
 
-var latlonGeohash = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    'default': Geohash
-});
-
 // Haversine formula
 // Calculating Harviestine distance between two lat/lon-points
 function getDistanceFromLatLonInKm (lat1, lon1, lat2, lon2) {
@@ -261,5 +256,5 @@ function deg2rad (deg) {
   return deg * (Math.PI / 180)
 }
 
-exports.Geohash = latlonGeohash;
+exports.Geohash = Geohash;
 exports.getDistanceFromLatLonInKm = getDistanceFromLatLonInKm;

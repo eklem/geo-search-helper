@@ -1,5 +1,5 @@
 const test = require('ava')
-const { getDistanceFromLatLonInKm } = require('../dist/gsh.cjs.js')
+const { getDistanceFromLatLonInKm, Geohash } = require('../dist/gsh.cjs.js')
 
 test('distance between Oslo and Trondheim in km', (t) => {
   t.plan(1)
@@ -27,4 +27,39 @@ test('distance between Oslo and North Cape in km', (t) => {
   const osloNorthcape = 1420.4342433086122
   const osloNorthcapeCalculated = getDistanceFromLatLonInKm(59.92163880374441, 10.748807812690696, 71.17150234604291, 25.783662073920766)
   t.deepEqual(osloNorthcapeCalculated, osloNorthcape)
+})
+
+test('encode Jutland', (t) => {
+  t.plan(1)
+  const jutland = 'u4pruy'
+  const jutlandCalculated = Geohash.encode(57.648, 10.410, 6)
+  t.deepEqual(jutlandCalculated, jutland)
+})
+
+test('decode Jutland', (t) => {
+  t.plan(1)
+  const jutland = { lat: 57.648, lon: 10.410 }
+  const jutlandCalculated = Geohash.decode('u4pruy')
+  t.deepEqual(jutlandCalculated, jutland)
+})
+
+test('encode Curitiba', (t) => {
+  t.plan(1)
+  const curitiba = '6gkzwgjz'
+  const curitibaCalculated = Geohash.encode(-25.38262, -49.26561, 8)
+  t.deepEqual(curitibaCalculated, curitiba)
+})
+
+test('decode Curitiba', (t) => {
+  t.plan(1)
+  const curitiba = { lat: -25.38262, lon: -49.26561 }
+  const curitibaCalculated = Geohash.decode('6gkzwgjz')
+  t.deepEqual(curitibaCalculated, curitiba)
+})
+
+test('fetch neighbours', (t) => {
+  t.plan(1)
+  const neighbours = { n: 'gbpb', ne: 'u000', e: 'spbp', se: 'spbn', s: 'ezzy', sw: 'ezzw', w: 'ezzx', nw: 'gbp8' }
+  const neighboursCalculated = Geohash.neighbours('ezzz')
+  t.deepEqual(neighboursCalculated, neighbours)
 })
