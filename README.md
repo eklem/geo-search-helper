@@ -1,18 +1,11 @@
 # geo-search-helper
-Helper functions for geographical search, filtering and sorting.
+Helper functions for geographical search, displaying, filtering and sorting.
 
-Based on `latlon-geohash` and Haversine formula ([ripped from this Stackoverflow answer](https://stackoverflow.com/a/27943/4210445)).
+Based on Haversine formula ([ripped from this Stackoverflow answer](https://stackoverflow.com/a/27943/4210445)).
 
 ## API
 
 * `getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)`: Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
-* `Geohash.encode(lat, lon, [precision])`: Encode latitude/longitude point to geohash of given precision
-   (number of characters in resulting geohash); if precision is not specified, it is inferred from
-   precision of latitude/longitude values.
-* `Geohash.decode(geohash)`: Return { lat, lon } of centre of given geohash, to appropriate precision.
-* `Geohash.bounds(geohash)`: Return { sw, ne } bounds of given geohash.
-* `Geohash.adjacent(geohash, direction)`: Return adjacent cell to given geohash in specified direction (N/S/E/W).
-* `Geohash.neighbours(geohash)`: Return all 8 adjacent cells (n/ne/e/se/s/sw/w/nw) to given geohash.
 
 ### Note to obtain neighbours as an array, you can use
 

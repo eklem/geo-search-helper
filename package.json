@@ -13,7 +13,6 @@
   },
   "devDependencies": {
     "node-fetch": "^3.2.10",
-    "latlon-geohash": "^2.0.0",
     "words-n-numbers": "^7.1.2",
     "batr": "^2.1.7"
   },
