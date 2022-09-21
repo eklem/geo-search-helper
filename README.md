@@ -5,34 +5,19 @@ Based on Haversine formula ([ripped from this Stackoverflow answer](https://stac
 
 ## API
 
-* `getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)`: Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
+* `getDistanceFromLatLonInKm(point1Obj, point2Obj)`: Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
+* ``
 
-### Note to obtain neighbours as an array, you can use
-
-```javaScript
-const neighboursObj = Geohash.neighbours(geohash);
-const neighboursArr = Object.keys(neighboursObj).map(n => neighboursObj[n]);
-```
-
-### The parent of a geocode
-
-Simply do `geocode.slice(0, -1)`.
-
-### Base32 to Base4
-
-If you want the geohash converted from Base32 to Base4, you can e.g.:
-
-```javaScript
-parseInt(Geohash.encode(52.20, 0.12, 6), 32).toString(4);
 ```
 
 ## What will be implemented
 
-Browser focus with ESM and UMD, but still CJS files for now. Tree functions:
+Browser focus with ESM and UMD, but still CJS files for now. Four functions:
 
 * [ ] getCurrentPosition
 * [x] Get distance from one point on a map to another point (either currentPosition or something else). Points described with lat/lon
-* [ ] Get map boundaries (lat/lon for SW and NE) based on a location + a radius in km from that point (either currentPosition or something else) 
+* [x] Get point2 from point1, distance and bearing. Only needed for map boundaries function, but keeping it exposed for now.
+* [x] Get map boundaries (lat/lon for SW and NE) based on a location + a radius in km from that point (either through getCurrentPosition or something else).
 
 Then you'll be able to sort search results on sortest to longest distance from your position or some other chosen position. And show i.e. the 10 closest search results or all the search results within a given distance from your position or some other chosen position.
 
