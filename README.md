@@ -6,9 +6,8 @@ Based on Haversine formula ([ripped from this Stackoverflow answer](https://stac
 ## API
 
 * `getDistanceFromLatLonInKm(point1Obj, point2Obj)`: Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
-* ``
-
-```
+* `mapBoundariesSWNE (fromPointObj, radius)`: Returns object with coordinates of map boundaries based on given position and radis from that position to be shown.
+* `rhumbDestinationToPoint (fromPointObj, distance, bearing)`: Returns object with coordinates of point based on position, distance and bearing from a given position.
 
 ## What will be implemented
 
