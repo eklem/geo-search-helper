@@ -5,9 +5,9 @@ With this you'll be able to sort search results on shortest to longest distance 
 
 ## API
 
-* `getDistanceFromLatLonInKm(point1Obj, point2Obj)`: Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
-* `mapBoundariesSWNE (fromPointObj, radius)`: Returns object with coordinates of map boundaries based on given position and radis from that position to be shown.
-* `rhumbDestinationToPoint (fromPointObj, distance, bearing)`: Returns object with coordinates of point based on position, distance and bearing from a given position.
+* `getDistanceFromLatLonInKm(fromPointObj, toPointObj)` Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
+* `mapBoundariesSWNE (fromPointObj, radius)` Returns object with coordinates of map boundaries based on given position and radis from that position to be shown.
+* `rhumbDestinationToPoint (fromPointObj, distance, bearing)` Returns object with coordinates of point based on position, distance and bearing from a given position.
 
 ## What's implemented
 
@@ -19,7 +19,9 @@ Browser focus with ESM and UMD, three functions:
 
 ### getCurrentPosition
 
-The demo has a simple setup that you can copy and edit to fit your need
+The `fromPointObj` can be your current position or something else, like one of the search results.
+
+#### Example
 
 ```javaScript
 // Position options
