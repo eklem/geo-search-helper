@@ -12,14 +12,13 @@ const items = [
 // console.log(items)
 
 function sortAndExtract (latLonArr) {
-  
   // sort array
   sort(latLonArr)
-  latLonArr.splice(1, latLonArr.length - 2);
+  latLonArr.splice(1, latLonArr.length - 2)
   return latLonArr
 }
 
-function sort(latLonArr) {
+function sort (latLonArr) {
   latLonArr.sort((a, b) => a - b)
   return latLonArr
 }

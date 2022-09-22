@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function mapBoundsPosition (fromPoint, radius) {
+function mapBoundsPosKm (fromPoint, radius) {
   const north = rhumbDestinationToPoint(fromPoint, radius, 0);
   const east = rhumbDestinationToPoint(fromPoint, radius, 90);
   const south = rhumbDestinationToPoint(fromPoint, radius, 180);
@@ -75,4 +75,4 @@ function rad2deg (rad) {
 }
 
 exports.getDistanceFromLatLonInKm = getDistanceFromLatLonInKm;
-exports.mapBoundsPosition = mapBoundsPosition;
+exports.mapBoundsPosKm = mapBoundsPosKm;

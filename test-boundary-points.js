@@ -455,5 +455,5 @@ const data = [
 ]
 
 function mapBoundsPoints (resultsArr, latKey, lonKey) {
-  // format keys 
+  // format keys
 }

@@ -1,4 +1,4 @@
-function mapBoundsPosition (fromPoint, radius) {
+function mapBoundsPosKm (fromPoint, radius) {
   const north = rhumbDestinationToPoint(fromPoint, radius, 0);
   const east = rhumbDestinationToPoint(fromPoint, radius, 90);
   const south = rhumbDestinationToPoint(fromPoint, radius, 180);
@@ -70,4 +70,4 @@ function rad2deg (rad) {
   return rad * 180 / Math.PI
 }
 
-export { getDistanceFromLatLonInKm, mapBoundsPosition };
+export { getDistanceFromLatLonInKm, mapBoundsPosKm };

@@ -1,5 +1,5 @@
 const test = require('ava')
-const { getDistanceFromLatLonInKm, mapBoundsPosition } = require('../dist/gsh.cjs.js')
+const { getDistanceFromLatLonInKm, mapBoundsPosKm } = require('../dist/gsh.cjs.js')
 
 test('distance between Oslo and Trondheim in km', (t) => {
   t.plan(1)

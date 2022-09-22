@@ -59,7 +59,7 @@
         .then((position) => {
           populateHTML(position)
           console.log(position)
-          const posObj = gsh.mapBoundariesSWNE(position, 0.1)
+          const posObj = gsh.mapBoundsPosKm(position, 0.1)
           console.log('SW, NE boundaries: ' + JSON.stringify(posObj))
           showMap(position, posObj)
         })

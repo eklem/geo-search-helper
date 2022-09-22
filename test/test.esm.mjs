@@ -1,5 +1,5 @@
 import test from 'ava'
-import { getDistanceFromLatLonInKm, mapBoundsPosition } from '../dist/gsh.esm.mjs'
+import { getDistanceFromLatLonInKm, mapBoundsPosKm } from '../dist/gsh.esm.mjs'
 
 test('distance between Oslo and Trondheim in km', (t) => {
   t.plan(1)

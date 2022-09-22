@@ -70,9 +70,9 @@ function rad2deg (rad) {
   return rad * 180 / Math.PI
 }
 
-function mapBoundsPoints(points) {
-  // 
-}
+// function mapBoundsPoints (points) {
+//   //
+// }
 
 // export stuff
 export { mapBoundsPosKm, getDistanceFromLatLonInKm }

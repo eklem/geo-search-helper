@@ -4,7 +4,7 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.gsh = {}));
 })(this, (function (exports) { 'use strict';
 
-  function mapBoundsPosition (fromPoint, radius) {
+  function mapBoundsPosKm (fromPoint, radius) {
     const north = rhumbDestinationToPoint(fromPoint, radius, 0);
     const east = rhumbDestinationToPoint(fromPoint, radius, 90);
     const south = rhumbDestinationToPoint(fromPoint, radius, 180);
@@ -77,7 +77,7 @@
   }
 
   exports.getDistanceFromLatLonInKm = getDistanceFromLatLonInKm;
-  exports.mapBoundsPosition = mapBoundsPosition;
+  exports.mapBoundsPosKm = mapBoundsPosKm;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
