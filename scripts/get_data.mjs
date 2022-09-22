@@ -23,11 +23,11 @@ const documentProcess = function (photos) {
       license: '© All rights reserved',
       ownername: photoObj.ownername,
       tags: extract(photoObj.tags, { regex: [words, numbers], toLowercase: true }),
-      latitude: photoObj.latitude,
-      longitude: photoObj.longitude,
+      latitude: Number(photoObj.latitude),
+      longitude: Number(photoObj.longitude),
       url: photoObj.url_l,
-      height: photoObj.height_l,
-      width: photoObj.width_l,
+      height: Number(photoObj.height_l),
+      width: Number(photoObj.width_l),
       urlphotopage: 'https://flickr.com/photos/breial/' + photoObj.id
     }
   })

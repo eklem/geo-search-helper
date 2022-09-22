@@ -1,4 +1,4 @@
-function mapBoundariesSWNE (fromPoint, radius) {
+function mapBoundsPosKm (fromPoint, radius) {
   const north = rhumbDestinationToPoint(fromPoint, radius, 0)
   const east = rhumbDestinationToPoint(fromPoint, radius, 90)
   const south = rhumbDestinationToPoint(fromPoint, radius, 180)
@@ -70,5 +70,9 @@ function rad2deg (rad) {
   return rad * 180 / Math.PI
 }
 
+function mapBoundsPoints(points) {
+  // 
+}
+
 // export stuff
-export { mapBoundariesSWNE, getDistanceFromLatLonInKm }
+export { mapBoundsPosKm, getDistanceFromLatLonInKm }
