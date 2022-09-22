@@ -71,4 +71,4 @@ function rad2deg (rad) {
 }
 
 // export stuff
-export { mapBoundariesSWNE, getDistanceFromLatLonInKm, rhumbDestinationToPoint }
+export { mapBoundariesSWNE, getDistanceFromLatLonInKm }

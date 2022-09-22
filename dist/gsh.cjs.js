@@ -76,4 +76,3 @@ function rad2deg (rad) {
 
 exports.getDistanceFromLatLonInKm = getDistanceFromLatLonInKm;
 exports.mapBoundariesSWNE = mapBoundariesSWNE;
-exports.rhumbDestinationToPoint = rhumbDestinationToPoint;

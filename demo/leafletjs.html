@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Eine OSM Karte mit Leaflet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" async></script>
+  </head>
+<body>
+  <div id="map" style="width: 600px; height: 400px"></div>
+  <script>
+  window.addEventListener('load', function() {
+    var map = L.map('map',
+      {
+        center: [50.27264, 7.26469],
+        zoom: 10
+      }
+    );
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+  }, false);
+  </script>
+</body>
+</html>

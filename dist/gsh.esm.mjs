@@ -70,4 +70,4 @@ function rad2deg (rad) {
   return rad * 180 / Math.PI
 }
 
-export { getDistanceFromLatLonInKm, mapBoundariesSWNE, rhumbDestinationToPoint };
+export { getDistanceFromLatLonInKm, mapBoundariesSWNE };

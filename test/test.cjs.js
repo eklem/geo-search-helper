@@ -1,5 +1,5 @@
 const test = require('ava')
-const { getDistanceFromLatLonInKm, rhumbDestinationToPoint, mapBoundariesSWNE } = require('../dist/gsh.cjs.js')
+const { getDistanceFromLatLonInKm, mapBoundariesSWNE } = require('../dist/gsh.cjs.js')
 
 test('distance between Oslo and Trondheim in km', (t) => {
   t.plan(1)
@@ -29,35 +29,35 @@ test('distance between Oslo and North Cape in km', (t) => {
   t.deepEqual(osloNorthcapeCalculated, osloNorthcape)
 })
 
-test('point 30 km west of Oslo ', (t) => {
-  t.plan(1)
-  const fromPoint = { lat: 59.922667730131145, lon: 10.753622077475681 } // Oslo
-  const toPoint = { lat: 59.922667730131145, lon: 10.215287117743966 }
-  const distance = 30
-  const bearing = 270
-  const toPointCalculated = rhumbDestinationToPoint(fromPoint, distance, bearing)
-  t.deepEqual(toPointCalculated, toPoint)
-})
+// test('point 30 km west of Oslo ', (t) => {
+//   t.plan(1)
+//   const fromPoint = { lat: 59.922667730131145, lon: 10.753622077475681 } // Oslo
+//   const toPoint = { lat: 59.922667730131145, lon: 10.215287117743966 }
+//   const distance = 30
+//   const bearing = 270
+//   const toPointCalculated = rhumbDestinationToPoint(fromPoint, distance, bearing)
+//   t.deepEqual(toPointCalculated, toPoint)
+// })
 
-test('point 320 km west of Oslo ', (t) => {
-  t.plan(1)
-  const fromPoint = { lat: 59.922667730131145, lon: 10.753622077475681 } // Oslo
-  const toPoint = { lat: 59.922667730131145, lon: 5.011382507004056 }
-  const distance = 320
-  const bearing = 270
-  const toPointCalculated = rhumbDestinationToPoint(fromPoint, distance, bearing)
-  t.deepEqual(toPointCalculated, toPoint)
-})
+// test('point 320 km west of Oslo ', (t) => {
+//   t.plan(1)
+//   const fromPoint = { lat: 59.922667730131145, lon: 10.753622077475681 } // Oslo
+//   const toPoint = { lat: 59.922667730131145, lon: 5.011382507004056 }
+//   const distance = 320
+//   const bearing = 270
+//   const toPointCalculated = rhumbDestinationToPoint(fromPoint, distance, bearing)
+//   t.deepEqual(toPointCalculated, toPoint)
+// })
 
-test('point 1000 km south of Hammerfest ', (t) => {
-  t.plan(1)
-  const fromPoint = { lat: 70.66612334709887, lon: 23.683028577531065 } // Hammerfest
-  const toPoint = { lat: 61.67290728791157, lon: 23.68302857753107 }
-  const distance = 1000
-  const bearing = 180
-  const toPointCalculated = rhumbDestinationToPoint(fromPoint, distance, bearing)
-  t.deepEqual(toPointCalculated, toPoint)
-})
+// test('point 1000 km south of Hammerfest ', (t) => {
+//   t.plan(1)
+//   const fromPoint = { lat: 70.66612334709887, lon: 23.683028577531065 } // Hammerfest
+//   const toPoint = { lat: 61.67290728791157, lon: 23.68302857753107 }
+//   const distance = 1000
+//   const bearing = 180
+//   const toPointCalculated = rhumbDestinationToPoint(fromPoint, distance, bearing)
+//   t.deepEqual(toPointCalculated, toPoint)
+// })
 
 test('SW and NE map boundaries from a radius 30 km from Oslo as centerpoint ', (t) => {
   t.plan(1)

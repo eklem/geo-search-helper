@@ -16,6 +16,7 @@ Browser focus with ESM and UMD, three functions:
 * [x] Get distance from one point on a map to another point (either currentPosition or something else). Points described with lat/lon
 * [x] Get point2 from point1, distance and bearing. Only needed for map boundaries function, but keeping it exposed for now.
 * [x] Get map boundaries (lat/lon for SW and NE) based on a location + a radius in km from that point (either through getCurrentPosition or something else).
+* [ ] Get map boundaries (lat/lon for SW and NE) based on a lot of locations in a map, sorting them to find the most northern, eastern, southern and western point. This way you can have a map boundary for displaying i.e. 10 search results.
 
 ### getCurrentPosition
 
@@ -59,6 +60,16 @@ function getPositionCallback() {
       populateHTML(error)
       return error
    })
+}
+
+function showMap(position) {
+   const map = L.map('map',
+   {
+      center: [position.lat, position.lon],
+      zoom: 10
+   }
+   );
+   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 }
 
 // Dummy HTML populate
