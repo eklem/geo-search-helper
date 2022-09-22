@@ -1,6 +1,6 @@
 {
   "name": "geo-search-helper",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Helper functions for geographical search within search-index.",
   "main": "index.js",
   "scripts": {
