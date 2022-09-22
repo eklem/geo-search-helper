@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing getGeo</title>
+  </head>
+
+    <h1>Your position</h1>
+    <div id="pos">[no position yet]</div>
+
+    <script>
+      // Position options
+      const getPositionOpt = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+      }
+
+      // Position promise
+      function getPosition() {
+        return new Promise((res, rej) => {
+          navigator.geolocation.getCurrentPosition(res, rej, getPositionOpt)
+        })
+      }
+
+      // Tying all the position stuff together
+      function getPositionCallback() {
+        getPosition()
+        // format position object
+        .then((pos) => {
+          const crd = pos.coords;
+          const position = { lat: crd.latitude, lon: crd.longitude, acc: crd.accuracy }          
+          return position
+        })
+        // Do your stuff here
+        .then((position) => {
+          populateHTML(position)
+          console.log(position)
+        })
+        // Handle errors
+        .catch((err) => {
+          console.log(err)
+          const error = { errortype: err.code, errormessage: err.message }
+          populateHTML(error)
+          return error
+        })
+      }
+
+      // Dummy HTML populate
+      function populateHTML(msg) {
+        const node = document.createElement('span').innerText = JSON.stringify(msg, 2, ' ')
+        document.getElementById('pos').replaceChildren(node)
+      }
+
+      // Fire up the position magic
+      getPositionCallback()
+    </script>
+  </body>
+</html> 
