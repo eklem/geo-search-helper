@@ -50,7 +50,7 @@ const data = [
 ]
 ```
 
-You can access the latitude by calling `['geo', 'latitude']` fro latitude and ['geo', 'longitude'] for longitude.
+You can access the latitude by calling `['geo', 'latitude']` fro latitude and `['geo', 'longitude']` for longitude.
 
 ## What's implemented
 
