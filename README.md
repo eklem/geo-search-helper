@@ -1,22 +1,44 @@
 # geo-search-helper
 Helper functions for geographical search, displaying, filtering and sorting.
 
+[![NPM version][npm-version-image]][npm-url]
+[![NPM downloads][npm-downloads-image]][npm-url]
+[![jsDelivr downloads](https://data.jsdelivr.com/v1/package/npm/geo-search-helper/badge?style=rounded)](https://www.jsdelivr.com/package/npm/geo-search-helper)
+[![Build Status][CI-image]][CI-url]
+[![JavaScript Style Guide][standardjs-image]][standardjs-url]
+[![MIT License][license-image]][license-url]
+
 With this you'll be able to sort search results on shortest to longest distance from your position or some other chosen position. And show i.e. the 10 closest search results or all the search results within a given distance from your position or some other chosen position. Will be possible to do sorting on numbers in version 3 of `search-index`.
+
+## Getting started
+
+### UMD script tag
+
+```HTML
+
+```
 
 ## API
 
-* `getDistanceFromLatLonInKm(f{romPointObj}, {toPointObj})` Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
-* `mapBoundsPosKm({fromPointObj}, radius)` Returns object with coordinates of map boundary based on given position and radius from that position.
-* wip - `mapBoundsPoints([array of PointObjects])` Returns object with coordinates of map boundary based on area covered by an array of geographical points.
+### `getDistanceFromLatLonInKm({fromPointObj}, {toPointObj})`
+
+Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
+
+### `mapBoundsPosKm({fromPointObj}, radius)`
+
+Returns object with coordinates of map boundaries based on given position and radius from that position.
+
+### `mapBoundsPoints([poinstArray], ['keyLatValue'], ['keyLonValue'])`
+
+Returns object with coordinates of map boundaries based on area covered by an array of geographical points. Needs two or more points to work.
 
 ## What's implemented
 
 Browser focus with ESM and UMD, three functions:
 
 * [x] Get distance from one point on a map to another point (either currentPosition or something else). Points described with lat/lon
-* [x] Get point2 from point1, distance and bearing. Only needed for map boundaries function, but keeping it exposed for now.
 * [x] Get map boundaries (lat/lon for SW and NE) based on a location + a radius in km from that point (either through getCurrentPosition or something else).
-* [ ] Get map boundaries (lat/lon for SW and NE) based on a lot of locations in a map, sorting them to find the most northern, eastern, southern and western point. This way you can have a map boundary for displaying i.e. 10 search results.
+* [x] Get map boundaries (lat/lon for SW and NE) based on a lot of locations in a map, sorting them to find the most northern, eastern, southern and western point. This way you can have a map boundary for displaying i.e. 10 search results.
 
 ### getCurrentPosition
 
@@ -81,3 +103,13 @@ function populateHTML(msg) {
 // Fire up the position magic
 getPositionCallback()
 ```
+
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
+[npm-url]: https://npmjs.org/package/geo-search-helper
+[npm-version-image]: https://img.shields.io/npm/v/geo-search-helper.svg?style=flat
+[npm-downloads-image]: https://img.shields.io/npm/dm/geo-search-helper.svg?style=flat
+[CI-url]: https://github.com/eklem/geo-search-helper/actions/workflows/tests.yml
+[CI-image]: https://github.com/eklem/geo-search-helper/actions/workflows/tests.yml/badge.svg
+[standardjs-url]: https://standardjs.com
+[standardjs-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=rounded

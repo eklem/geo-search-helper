@@ -1,11 +1,42 @@
+// Finding map boundaries from a point and a radius
 function mapBoundsPosKm (fromPoint, radius) {
   const north = rhumbDestinationToPoint(fromPoint, radius, 0)
   const east = rhumbDestinationToPoint(fromPoint, radius, 90)
   const south = rhumbDestinationToPoint(fromPoint, radius, 180)
   const west = rhumbDestinationToPoint(fromPoint, radius, 270)
 
-  const boundaries = { sw: { lat: south.lat, lon: west.lon }, ne: { lat: north.lat, lon: east.lon } }
-  return boundaries
+  return { sw: { lat: south.lat, lon: west.lon }, ne: { lat: north.lat, lon: east.lon } }
+}
+
+// Finding map boundaries from a set of points
+function mapBoundsPoints (resultsArr, keyPathLat, keyPathLon) {
+  if (resultsArr.length <= 1) {
+    throw new Error('mapBoundsPoints: Array to short to find boundaries. Needs two or more points.')
+  }
+  const latArr = extractLatLon(resultsArr, keyPathLat)
+  sortSlice(latArr)
+  const lonArr = extractLatLon(resultsArr, keyPathLon)
+  sortSlice(lonArr)
+  return { sw: { lat: latArr[0], lon: lonArr[0] }, ne: { lat: latArr[1], lon: lonArr[1] } }
+}
+
+// Helper-function for mapBoundsPoints
+//   purpose: extracting latitude or longitude numbers to an array
+function extractLatLon (resultsArr, keyPath) {
+  // traverse through object(s) to get the correct key/value for latitude/longitude
+  const latLon = resultsArr.map((obj) => {
+    const latLonArr = keyPath.reduce((acc, key) => acc[key], obj)
+    return latLonArr
+  })
+  return latLon
+}
+
+// Helper-function for mapBoundsPoints
+//   purpose: Sorting from lowest to highest value and keeping lowest and highest
+function sortSlice (latLonArr) {
+  latLonArr.sort((a, b) => a - b)
+  latLonArr.splice(1, latLonArr.length - 2)
+  return latLonArr
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
@@ -75,4 +106,4 @@ function rad2deg (rad) {
 // }
 
 // export stuff
-export { mapBoundsPosKm, getDistanceFromLatLonInKm }
+export { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm }
