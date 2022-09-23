@@ -32,6 +32,26 @@ Returns object with coordinates of map boundaries based on given position and ra
 
 Returns object with coordinates of map boundaries based on area covered by an array of geographical points. Needs two or more points to work.
 
+For `latitude` and `longitude` in nested objects like:
+
+```javaScript
+const data = [
+  {
+    id: '14272199162',
+    geo: {
+      latitude: 59.907427,
+      longitude: 10.785616
+    },
+    url: 'https://live.staticflickr.com/5513/14272199162_e7547e4394_b.jpg',
+    height: 1024,
+    width: 1024,
+    urlphotopage: 'https://flickr.com/photos/breial/14272199162'
+  }
+]
+```
+
+You can access the latitude by calling `['geo', 'latitude']` fro latitude and ['geo', 'longitude'] for longitude.
+
 ## What's implemented
 
 Browser focus with ESM and UMD, three functions:
