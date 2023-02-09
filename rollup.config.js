@@ -10,9 +10,9 @@ export default [
   {
     input: './src/index.js',
     output: [
-      { name: 'gsh', file: './dist/gsh.umd.js', format: 'umd', exports: 'named' },
-      { file: './dist/gsh.cjs.js', format: 'cjs' },
-      { file: './dist/gsh.esm.mjs', format: 'es' }
+      { name: 'gsh', file: './dist/geo-search-helper.umd.js', format: 'umd', exports: 'named' },
+      { file: './dist/geo-search-helper.cjs.js', format: 'cjs' },
+      { file: './dist/geo-search-helper.esm.mjs', format: 'es' }
     ],
     plugins: [
       resolve(), // so Rollup can find `ms`
@@ -23,9 +23,9 @@ export default [
   {
     input: './src/index.js',
     output: [
-      { name: 'gsh', file: './dist/gsh.umd.min.js', format: 'umd', exports: 'named' },
-      { file: './dist/gsg.cjs.min.js', format: 'cjs' },
-      { file: './dist/gs.esm.min.mjs', format: 'es' }
+      { name: 'gsh', file: './dist/geo-search-helper.umd.min.js', format: 'umd', exports: 'named' },
+      { file: './dist/geo-search-helper.cjs.min.js', format: 'cjs' },
+      { file: './dist/geo-search-helper.esm.min.mjs', format: 'es' }
     ],
     plugins: [
       resolve(), // so Rollup can find `ms`

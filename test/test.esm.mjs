@@ -1,5 +1,5 @@
 import test from 'ava'
-import { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm } from '../dist/gsh.esm.mjs'
+import { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm } from '../dist/geo-search-helper.esm.mjs'
 
 const data = [
   {

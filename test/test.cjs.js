@@ -1,5 +1,5 @@
 const test = require('ava')
-const { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm } = require('../dist/gsh.cjs.js')
+const { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm } = require('../dist/geo-search-helper.cjs.js')
 
 const data = [
   {

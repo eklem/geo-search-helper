@@ -15,7 +15,21 @@ With this you'll be able to sort search results on shortest to longest distance 
 ### UMD script tag
 
 ```HTML
+<script src="geo-search-helper-umd.js"></script>
+```
 
+### ESM script tag
+
+```HTML
+<script type="module">
+   import geoSearchHelper from 'geo-search-helper.esm.mjs'
+</script>
+```
+
+### CJS
+
+```JavaScript
+const { getDistanceFromLatLonInKm, mapBoundsPoints, mapBoundsPosKm } = require('geo-search-helper')
 ```
 
 ## API
