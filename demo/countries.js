@@ -40,7 +40,7 @@ const countries = [
   { countryId: 'CF', lat: '6.611111', lon: '20.939444', country: 'Central African Republic' },
   { countryId: 'CG', lat: '-0.228021', lon: '15.827659', country: 'Congo [Republic]' },
   { countryId: 'CH', lat: '46.818188', lon: '8.227512', country: 'Switzerland' },
-  { countryId: 'CI', lat: '7.539989', lon: '-5.54708', country: 'Côte d'Ivoire' },
+  { countryId: 'CI', lat: '7.539989', lon: '-5.54708', country: 'Côte d\'Ivoire' },
   { countryId: 'CK', lat: '-21.236736', lon: '-159.777671', country: 'Cook Islands' },
   { countryId: 'CL', lat: '-35.675147', lon: '-71.542969', country: 'Chile' },
   { countryId: 'CM', lat: '7.369722', lon: '12.354722', country: 'Cameroon' },
