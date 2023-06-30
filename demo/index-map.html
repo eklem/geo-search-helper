@@ -42,7 +42,7 @@
           color: 'rgba(0,0,0, .4)',
           fillColor: 'black',
           fillOpacity: 0.15,
-          radius: 100
+          radius: 35000
       }).addTo(map);
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map)
       }
@@ -60,7 +60,7 @@
         .then((position) => {
           populateHTML(position)
           console.log(position)
-          const posObj = gsh.mapBoundsPosKm(position, 0.1)
+          const posObj = gsh.mapBoundsPosKm(position, 35)
           console.log('SW, NE boundaries: ' + JSON.stringify(posObj))
           showMap(position, posObj)
         })

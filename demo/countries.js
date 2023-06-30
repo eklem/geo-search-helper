@@ -246,4 +246,4 @@ const countries = [
   { countryId: 'ZW', lat: '-19.015438', lon: '29.154857', country: 'Zimbabwe' }
 ]
 
-exports.countries = countries
+export { countries }
