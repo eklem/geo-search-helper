@@ -1,7 +1,7 @@
 // How to get search-index initialised:
 // https://stackoverflow.com/questions/42237388/syntaxerror-import-declarations-may-only-appear-at-top-level-of-a-module/48583456#48583456
 
-import { cities } from  './cities.js'
+import { cities } from  './cities.mjs'
 console.dir(cities)
 
 // import { PUT, DOCUMENT_COUNT, ALL_DOCUMENTS, DICTIONARY } from 'https://cdn.jsdelivr.net/npm/search-index@3.4.0/dist/search-index.js'
