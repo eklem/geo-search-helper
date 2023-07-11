@@ -30,7 +30,7 @@ With this you'll be able to sort search results on shortest to longest distance 
 
 ```HTML
 <script type="module">
-   import { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm }} from 'geo-search-helper.esm.mjs'
+   import { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm } from 'geo-search-helper.esm.mjs'
 </script>
 ```
 
