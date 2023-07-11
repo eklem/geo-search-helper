@@ -35,9 +35,12 @@ With this you'll be able to sort search results on shortest to longest distance 
 ```
 
 #### Through JsDelivr
+
+```HTML
 <script type="module">
    import { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm } from 'https://cdn.jsdelivr.net/npm/geo-search-helper/dist/geo-search-helper.esm.min.mjs'
 </script>
+```
 
 ### CJS
 
