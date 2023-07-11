@@ -1,10 +1,13 @@
 {
   "name": "geo-search-helper",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Helper functions for geographical search within search-index.",
   "main": "./dist/geo-search-helper.cjs.min.js",
   "module": "./dist/geo-search-helper.esm.min.mjs",
   "browser": "./dist/geo-search-helper.umd.min.js",
+  "files": [
+    "./dist"
+  ],
   "scripts": {
     "build": "rollup --config",
     "test": "standard './src/*.js' './test/*.mjs' && npm run build && npx ava ./test/test.cjs.js && npx ava ./test/test.esm.mjs && cp ./dist/geo-search-helper.umd.js ./demo/"
