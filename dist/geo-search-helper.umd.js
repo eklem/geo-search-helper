@@ -47,7 +47,7 @@
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
   /*  Found on Stackoverflow - https://stackoverflow.com/a/27943/4210445                            */
-  /*  Gessing it's from an early version of geodesy, so:                                            */
+  /*  Guessing it's from an early version of geodesy, so:                                            */
   /*                                                                                                */
   /* Latitude/longitude spherical geodesy tools                         (c) Chris Veness 2002-2021  */
   /*                                                                                   MIT Licence  */

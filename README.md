@@ -16,15 +16,28 @@ With this you'll be able to sort search results on shortest to longest distance 
 
 ```HTML
 <script src="geo-search-helper-umd.js"></script>
+<!-- gsh.mapBoundsPosKm, gsh.mapBoundsPoints, gsh.getDistanceFromLatLonInKm available -->
+```
+
+#### Through JsDelivr
+
+```HTML
+<script src="https://cdn.jsdelivr.net/npm/geo-search-helper@0.2.1/dist/geo-search-helper.umd.min.js"></script>
+<!-- gsh.mapBoundsPosKm, gsh.mapBoundsPoints, gsh.getDistanceFromLatLonInKm available -->
 ```
 
 ### ESM script tag
 
 ```HTML
 <script type="module">
-   import geoSearchHelper from 'geo-search-helper.esm.mjs'
+   import { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm }} from 'geo-search-helper.esm.mjs'
 </script>
 ```
+
+#### Through JsDelivr
+<script type="module">
+   import { mapBoundsPosKm, mapBoundsPoints, getDistanceFromLatLonInKm } from 'https://cdn.jsdelivr.net/npm/geo-search-helper/dist/geo-search-helper.esm.min.mjs'
+</script>
 
 ### CJS
 
