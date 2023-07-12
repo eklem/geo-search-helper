@@ -1,6 +1,6 @@
 {
   "name": "geo-search-helper",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Helper functions for geographical search within search-index.",
   "main": "./dist/geo-search-helper.cjs.min.js",
   "module": "./dist/geo-search-helper.esm.min.mjs",
