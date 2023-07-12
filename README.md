@@ -48,15 +48,40 @@ With this you'll be able to sort search results on shortest to longest distance 
 const { getDistanceFromLatLonInKm, mapBoundsPoints, mapBoundsPosKm } = require('geo-search-helper')
 ```
 
+## Ways of using the library
+
+First you get a search result, calculate distance from point of interest and sort it on smallest to highest distance.
+
+Then there is two ways of using the library. Either your use case is to show search results within a given distance, or show [n] search results.
+
+For search results within a given distance, you cut of the results biggere than that given distance and find map bounds with `mapBoundsPosKm()` to be able to show the search results on a map.
+
+![Cutting of search results after a given distance.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/preparing-for-max-distance.png)
+
+
+For showing the first [n] search results, you use `mapBoundsPoints()` to be able to show the search results on a map.
+
+![Cutting of search results after a given number of results.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/preparing-for-max-results.png)
+
+
 ## API
 
 ### `getDistanceFromLatLonInKm({fromPointObj}, {toPointObj})`
+
+![Calculating distances from point of interest to other geographical points.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/getDistanceFromLatLonInKm.png)
 
 Returns shortest distance over the earth’s surface – using the ‘Haversine’ formula. Result in kilometers. To i.e. sort a search result from a point on the map.
 
 ### `mapBoundsPosKm({fromPointObj}, radius)`
 
 Returns object with coordinates of map boundaries based on given position and radius from that position.
+
+#### Input
+![Input to the function: Point of interest and radius.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/mapBoundsPosKm-input.png)
+
+#### Output
+![Output from the function: Upper, left coordinate and bottom right coordinate for a map view.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/mapBoundsPosKm-output.png)
+
 
 ### `mapBoundsPoints([poinstArray], ['keyLatValue'], ['keyLonValue'])`
 
@@ -81,6 +106,12 @@ const data = [
 ```
 
 You can access the latitude by calling `['geo', 'latitude']` fro latitude and `['geo', 'longitude']` for longitude.
+
+#### Input
+![Input to the function: Map coordinates from search result in addition to your point of interest, if you choose.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/mapBoundsPoints-input.png)
+
+#### Output
+![Output from the function: Upper, left coordinate and bottom right coordinate for a map view.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/mapBoundsPoints-output.png)
 
 ## What's implemented
 
@@ -153,6 +184,12 @@ function populateHTML(msg) {
 // Fire up the position magic
 getPositionCallback()
 ```
+
+## Issue when map shown is not square
+
+When map shown is not square, the square mapview will be within the boundaries of the horisontal or vertical map. Not a big problem, but okay to know about.
+
+![When map shown is not square, the square mapview will be within the boundaries of the horisontal or vertical map.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/map-shown-not-square.png)
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
