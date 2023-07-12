@@ -8,7 +8,7 @@ Helper functions for geographical search, displaying, filtering and sorting.
 [![JavaScript Style Guide][standardjs-image]][standardjs-url]
 [![MIT License][license-image]][license-url]
 
-With this you'll be able to sort search results on shortest to longest distance from your position or some other chosen position. And show i.e. the 10 closest search results or all the search results within a given distance from your position or some other chosen position. Will be possible to do sorting on numbers in version 3 of `search-index`.
+With this you'll be able to sort search results on shortest to longest distance from your position or some other chosen position. And show i.e. the 10 closest search results or all the search results within a given distance from your position or some other chosen position. Calculation of distance and sorting is done after you get the search result.
 
 ## Getting started
 
@@ -185,11 +185,16 @@ function populateHTML(msg) {
 getPositionCallback()
 ```
 
-## Issue when map shown is not square
+## Issues
+
+### When the map shown is not square
 
 When map shown is not square, the square mapview will be within the boundaries of the horisontal or vertical map. Not a big problem, but okay to know about.
 
 ![When map shown is not square, the square mapview will be within the boundaries of the horisontal or vertical map.](https://github.com/eklem/geo-search-helper/blob/trunk/mockups/map-shown-not-square.png)
+
+### Proximity- and content quality tradeoff
+You will get the top [n] search results sorted and then show the ones closest to you. Either by distance (radius) or closest [n-x]. If you choose to get 1000 search results, sort them geographically and cut the list of after 10 closest to you, the proximity-quality will be higher, but the content-quality will be lower. Especially if you do an OR-search.
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
