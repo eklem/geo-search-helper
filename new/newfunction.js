@@ -21,10 +21,8 @@ function getPositionCallback() {
      const crd = pos.coords;
      const position = { lat: crd.latitude, lon: crd.longitude, acc: crd.accuracy }          
      console.dir(position.lat + ',' + position.lon)
+     console.dir('https://google.com/maps/@' + position.lat + ',' + position.lon)
      return position
-  })
-  .then ((position) => {
-    
   })
   // Handle errors
   .catch((err) => {
@@ -35,5 +33,3 @@ function getPositionCallback() {
 }
 
 getPositionCallback()
-
-
