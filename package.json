@@ -17,7 +17,7 @@
     "url": "git+https://github.com/eklem/geo-search-helper.git"
   },
   "devDependencies": {
-    "cities.json": "^1.1.22",
+    "cities.json": "^1.1.23",
     "batr": "^2.1.9"
   },
   "keywords": [
