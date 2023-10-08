@@ -5,19 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" async></script> -->
+    <link rel="stylesheet" href="./css/geo-search-app.css" />
     <script src="https://cdn.tailwindcss.com/?plugins=forms,typography,aspect-ratio"></script>
     <script type="module" src="./geo-search-app.mjs"></script>
     <title>Testing getGeo</title>
   </head>
   <body class="bg-slate-200">
     <div class="bg-slate-600 text-rose-50 p-3">
+      <a href="https://github.com/eklem/geo-search-helper"><img src="./icons/1x/logo-github-1.png" width="32" height="32" alt="GitHub Octocat" class="float-right mr-4"></a>
       <h1 class="text-3xl font-thin">geo-search-helper demo</h1>
     </div>
-    <div class="p-3">
-      <button id="index" class="bg-slate-600 hover:bg-slate-800 text-white font-bold my-2 py-2 px-4 rounded">Index data</button>
+    <div class="bg-slate-300 p-3 grid grid-flow-col justify-stretch">
+      <div class="text-xl text-slate-700">[x] cities indexed</div>
+      <div class="place-self-end"><button id="index" class="bg-slate-600 hover:bg-slate-800 text-white py-2 px-4 rounded">Index cities</button></div>
     </div>
-    <div id="populateElement" class="h-96 font-mono bg-slate-800 text-yellow-100 border-2 border-slate-900 py-4 px-4 overflow-y-auto overscroll-auto">
-      <h2>Search result</h2>
+    <div class="p-3">
+      <input id="searchBox" type="search" class="mt-1 block rounded bg-slate-100 border-transparent focus:border-slate-600 focus:ring-0" placeholder="[Type city name]">
+      <h2 class="text-xl text-slate-700 mt-5">Show:</h2>
+      <div>
+        <input type="radio" id="distance" name="searchtype" checked />
+        <label for="huey">within <input id="resultsDistance" type="number" value="100" class="mt-2 w-24 rounded bg-slate-100 border-transparent focus:border-slate-600 focus:ring-0"> km</label>
+      </div>
+      <div>
+        <input type="radio" id="amount" name="searchtype" />
+        <label for="huey">closest <input id="resultsAmount" type="number" value="10" class="mt-2 w-24 rounded bg-slate-100 border-transparent focus:border-slate-600 focus:ring-0"> cities</label>
+      </div>
+    </div>
+    <div class="p-3 bg-slate-300">
+      <h2 class="text-xl text-slate-700 mb-4">Search results: </h2>
+      <div class="mb-2">
+        <h3><b>city 1</b> - countryCode</h3>
+        <p>Distance: x km</p>
+      </div>
+      <div class="mb-2">
+        <h3><b>city 2</b> - countryCode</h3>
+        <p>Distance: x km</p>
+      </div>
+      <div class="mb-2">
+        <h3><b>city 3</b> - countryCode</h3>
+        <p>Distance: x km</p>
+      </div>
+      <div class="mb-2">
+        <h3><b>city 4</b> - countryCode</h3>
+        <p>Distance: x km</p>
+      </div>
+      <div class="mb-2">
+        <h3><b>city 5</b> - countryCode</h3>
+        <p>Distance: x km</p>
+      </div>
     </div>
   </body>
 </html> 
