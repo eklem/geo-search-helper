@@ -1,1 +1,1 @@
-console.dir(countries)
+console.dir(cities)

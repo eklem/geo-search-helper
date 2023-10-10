@@ -7,13 +7,17 @@
     <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" async></script> -->
     <link rel="stylesheet" href="./css/geo-search-app.css" />
     <script src="https://cdn.tailwindcss.com/?plugins=forms,typography,aspect-ratio"></script>
+    <script type="module" src="cities.mjs"></script>
+    <script type="module">
+      import { reactive, html } from 'https://esm.sh/@arrow-js/core';
+    </script>
     <script type="module" src="./geo-search-app.mjs"></script>
-    <title>Testing getGeo</title>
+    <title>geo-search-helper demo</title>
   </head>
   <body class="bg-slate-200">
     <div class="bg-slate-600 text-rose-50 p-3">
       <a href="https://github.com/eklem/geo-search-helper"><img src="./icons/1x/logo-github-1.png" width="32" height="32" alt="GitHub Octocat" class="float-right mr-4"></a>
-      <h1 class="text-3xl font-thin">geo-search-helper demo</h1>
+      <h1 class="text-3xl font-thin">geo-search-helper</h1>
     </div>
     <div class="bg-slate-300 p-3 grid grid-flow-col justify-stretch">
       <div class="text-xl text-slate-700">[x] cities indexed</div>
