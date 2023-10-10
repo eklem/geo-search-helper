@@ -205,3 +205,32 @@ You will get the top [n] search results sorted and then show the ones closest to
 [CI-image]: https://github.com/eklem/geo-search-helper/actions/workflows/tests.yml/badge.svg
 [standardjs-url]: https://standardjs.com
 [standardjs-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=rounded
+
+## Development setup
+
+### Install VSCode plugins:
+
+* Live Server by Ritwick Dey
+* ngrok for VS Code by philnash
+
+### Set up ngrok account
+* Go to [ngrok](https://ngrok.com/) and set up account with i.e. GitHub user
+* Log in and go to [endpoint overview](https://dashboard.ngrok.com/cloud-edge/endpoints)
+
+### First time:
+
+* CMD + SHIFT + p
+* ngrok config add-authtoken
+
+### Start:
+
+* Start Live server by clicking `Go Live` in bottom right corner.
+* CMD + SHIFT + p
+* ngrok start
+* Port number: 80
+
+### Stop:
+
+* CMD + SHIFT + p
+* ngrok stop
+* Stop Live server by clicking `Port: 80` in bottom right corner.
