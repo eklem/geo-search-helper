@@ -228,6 +228,7 @@ You will get the top [n] search results sorted and then show the ones closest to
 * CMD + SHIFT + p
 * ngrok start
 * Port number: 80
+* Press `Go Live` in bottom right corner
 
 ### Stop:
 
