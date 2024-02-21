@@ -17,7 +17,7 @@
     "url": "git+https://github.com/eklem/geo-search-helper.git"
   },
   "devDependencies": {
-    "@arrow-js/core": "^1.0.0-alpha.9",
+    "@arrow-js/core": "^1.0.0-alpha.10",
     "batr": "^2.1.10",
     "cities.json": "^1.1.33",
     "search-index": "^4.0.0"
