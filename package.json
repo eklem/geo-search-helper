@@ -20,7 +20,7 @@
     "@arrow-js/core": "^1.0.0-alpha.10",
     "batr": "^2.1.10",
     "cities.json": "^1.1.49",
-    "search-index": "^6.0.0"
+    "search-index": "^6.0.1"
   },
   "keywords": [
     "search",
